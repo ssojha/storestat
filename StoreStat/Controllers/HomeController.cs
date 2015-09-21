@@ -19,13 +19,14 @@ namespace StoreStat.Controllers
         }
 
         [HttpGet]
-        public ActionResult StoreDetails(int keyid)
+        public JsonResult StoreDetails(string keyid)
         {
-            var oldval = 0;
-
            
-            return Json(new { success = true, oldval = oldval },
-                        JsonRequestBehavior.AllowGet);
+            string result = "{StoreName:'store1',StoreID:'1111111',Address1:'abc',Address2:'cde',city:'Newyork',state:'newState',ZipCode:'1234'}";
+            return Json(result, JsonRequestBehavior.AllowGet);
+           
+            //return Json(new { success = true, oldval = oldval },
+            //            JsonRequestBehavior.AllowGet);
         }
 
         [HttpGet]
