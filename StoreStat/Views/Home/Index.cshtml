@@ -53,9 +53,11 @@
             background-color: #F0F0F0 ;
             border: 1px solid #666666 ;
             border-bottom-width: 0px ;
-            padding: 20px 20px 400px 20px ;
+            padding: 20px 20px 0px 20px ;
             }
+        
 </style>
+
 <body style="background-color:green">
 @section featured {
  <div id="map_canvas" style="height: 500px;"></div>
@@ -65,7 +67,7 @@
 <!-- Example row of columns -->
 @Html.Hidden("storename", "Mexico");
 @Html.Hidden("strid",2)
-<div>
+@*<div>
         
                 <span id="intro" style="font-size:20px;color:white">  Choose a store to check status</span>
                
@@ -86,7 +88,44 @@
               </div></a>
             </div>
         </div>
- </div>
+ </div>*@
+    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">STORE STATS</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">                
+                <li class="">@Html.ActionLink("Home", "Index", "Home")</li>
+                <li class=""><a id="LinkStore" href="#"><div class="">Store</div></a></li>
+                <li class=""><a id="LinkOrder"href="#"><div class="">Order</div></a></li>
+                <li class=""><a id="LinkBatch" href="#"><div class="">Batch</div></a></li>
+                    
+            </ul>
+        </div>
+    </div>
+</div>
+    <div class="navbar navbar-inverse navbar-fixed-bottom">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Choose a store to check status</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">              
+            </ul>
+        </div>
+    </div>
+</div>
  
 <div id="storedetailcontainer" style="background-color:green;color:white">
        <div id="storedetailinner" style="background-color:green;color:white">
